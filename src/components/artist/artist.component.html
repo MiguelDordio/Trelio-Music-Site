@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div *ngIf="artist">
+    <header class="artist-header">
+        <div *ngIf="artist.images.length > 0">
+            <img class="artist-thumb img-circle" src="{{artist.images[1].url}}">
+        </div>
+        <h1>{{artist.name}}</h1>
+    </header>
+
+    <div class="artist-albums">
+        <div class="row">
+            <div *ngFor="let album of albums">
+                <div class="col-md-3">
+                    <div class="well album">
+                        <div *ngIf="album.images.length > 0">
+                            <img src="{{album.images[2].url}}" class="rounded mx-auto d-block" alt="...">
+                            <h4>{{album.name}}</h4>
+                            <a class="btn btn-default btn-block" routerLink="/album/{{album.id}}">Album Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

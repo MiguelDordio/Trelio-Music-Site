@@ -1,0 +1,9 @@
+.releases_title {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.releases-albums {
+    padding-top: 30px;
+}

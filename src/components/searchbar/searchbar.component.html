@@ -1,0 +1,18 @@
+<div id="searchBarWrap">
+    <input id="searchBar" type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" placeholder="Search an Artist...">
+</div>
+
+<div *ngIf="searchRes">
+    <div *ngFor="let artist of searchRes">
+        <div class="row">
+            <div class="col">
+                <div class="search-res well">
+                    <div *ngIf="artist.images.length > 0">
+                        <img class="artist-thumb img-circle" src="{{artist.images[2].url}}" width="64" height="64">
+                    </div>
+                    <h3><a class="nav-link" [routerLink]="['/artist', artist.id]" routerLinkActive="active">{{ artist.name }}</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+#searchBarWrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+#searchBar {
+    border: #ff0022 solid;
+    border-width: .2em;
+    border-radius: .7em;
+    padding: .2em .2em .2em .5em;
+    width: 325px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.search-res {
+    border: #ff0022 solid;
+    border-width: .1em;
+    border-radius: .7em;
+    width: 325px;
+}
+
+.artist-thumb {
+    float: left;
+}

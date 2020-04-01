@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<app-searchbar></app-searchbar>
+
+<h3 class="releases_title">New Releases</h3>
+
+<div class="releases-albums">
+    <div class="row">
+        <div *ngFor="let releases of releases">
+            <div class="col-md-3">
+                <div class="well releases">
+                    <div *ngIf="releases.images.length > 0">
+                        <img src="{{releases.images[2].url}}" class="rounded mx-auto d-block" alt="...">
+                        <p>{{releases.name}}</p>
+                        <small>{{releases.artists[0].name}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
