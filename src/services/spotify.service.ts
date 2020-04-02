@@ -50,6 +50,10 @@ export class SpotifyService {
     .pipe( map(data => data['artists']));
   }
 
+  getAlbumById(id:string){
+    return this.http.get('https://api.spotify.com/v1/albums/'+id+'?market=US', this.reqOptions);
+  }
+
   getArtistById(id:string){
     return this.http.get(this.spotifyApiUrl + `artists/${id}`, this.reqOptions)
   }

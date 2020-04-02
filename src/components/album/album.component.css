@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Baloo2-Bold';
+    src: url('src/assets/fonts/Baloo2-Bold.ttf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Baloo2-Medium';
+    src: url('src/assets/fonts/Baloo2-Medium.ttf') format("opentype");
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.tracklistHeader_body {
+    text-align: initial;
+    width: 70%;
+    font-family: Baloo2-Medium;
+}
+
+.tracklistHeader_text-silence {
+    margin-bottom: 0;
+}
+
+.track {
+    font-family: Baloo2-Medium;
+    display: block;
+}
+
+.track_name {
+    padding-left: 10px;
+}
+
+.copyrights {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .015em;
+    color: #fff;
+    opacity: .6;
+    padding: 0 5% 2em;
+}

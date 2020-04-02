@@ -1,12 +1,43 @@
-<p>album works!</p>
+<app-navbar></app-navbar>
 
-<div class="songs-albums">
-    <div class="row">
-        <div *ngFor="let songs of songs">
-            <div class="col-md-3">
-                <div class="well songs">
-                    <p>{{songs.name}}</p>
+<div class="container-fluid">
+    <div>
+        <div class="col-xs-12 col-lg-3 col-xl-4">
+            <div>
+                <header class="tracklistHeader">
+                    <div>
+                        <div class="tracklistHeader_media" *ngIf="searchRes.images.length > 0">
+                            <img class="artist-thumb img-circle" src="{{searchRes.images[1].url}}">
+                        </div>
+                    </div>
+                    <div class="tracklistHeader_body">
+                        <div class="tracklistHeader_entity-name">
+                            <h1>{{searchRes.name}}</h1>
+                            <p>De {{searchRes.artists[0].name}}</p>
+                        </div>
+                        <div class="tracklistHeader_description-wrapper">
+                            <p class="tracklistHeader_text-silence">{{searchRes.release_date}} • {{searchRes.total_tracks}} Músicas</p>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-lg-9 col-xl-8">
+            <section class="tracklist-container">
+                <div *ngFor="let songs of songs">
+                    <div class="track">
+                        <svg class="bi bi-music-note" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                            <path fill-rule="evenodd" d="M9 3v10H8V3h1z" clip-rule="evenodd"/>
+                            <path d="M8 2.82a1 1 0 01.804-.98l3-.6A1 1 0 0113 2.22V4L8 5V2.82z"/>
+                        </svg>
+                        <span class="track_name">{{songs.name}}</span>
+                    </div>
                 </div>
+            </section>
+            <div class="copyrights">
+                <p><span dir="auto">{{ searchRes.copyrights[0].text }}</span></p>
             </div>
         </div>
     </div>

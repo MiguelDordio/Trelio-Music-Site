@@ -17,10 +17,11 @@
     justify-content: space-between;
     align-items: center;
     font-family: Baloo2-Medium;
+    background-color: #ff0022;
 }
 
 a {
-    color: #ff0022;
+    color: #fdfffc;
     margin: 0;
 }
 

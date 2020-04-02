@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Baloo2-Bold';
+    src: url('src/assets/fonts/Baloo2-Bold.ttf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Baloo2-Medium';
+    src: url('src/assets/fonts/Baloo2-Medium.ttf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Baloo2-Regular';
+    src: url('src/assets/fonts/Baloo2-Regular.ttf') format("opentype");
+}
+
 .releases_title {
     display: flex;
     justify-content: center;
@@ -6,4 +21,16 @@
 
 .releases-albums {
     padding-top: 30px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.releases_item {
+    font-family: Baloo2-Medium;
+    text-align: center;
 }

@@ -12,6 +12,7 @@ import { Song } from '../../Song';
 })
 export class AlbumComponent implements OnInit {
 
+  searchRes: any;
   songs: Song[];
 
   constructor(
@@ -24,11 +25,13 @@ export class AlbumComponent implements OnInit {
       this.route.params
             .pipe(map(params => params['id']))
             .subscribe((id) => {
-              this.spotifyService.getAlbumTracks(id)
-                  .subscribe(songs => {
-                    console.log('songs: ' + songs);
-                      this.songs = songs;
-                  })
+              this.spotifyService.getAlbumById(id)
+                  .subscribe(searchRes => {
+                    console.log('searchRes: ' + searchRes);
+                    this.searchRes = searchRes;
+                    console.log('tracks: ' + searchRes['tracks'].items);
+                    this.songs = searchRes['tracks'].items;
+                });
           })
     }, 2500);
   }
