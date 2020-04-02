@@ -18,10 +18,6 @@ export class SearchbarComponent implements OnInit {
     private spotifyService: SpotifyService) { }
 
   searchMusic(){
-    console.log('l: ' + this.searchRes.length);
-    if(this.searchRes.length == 0){
-      this.searchRes = [];
-    }
     this.spotifyService.getArtist(this.searchStr)
       .subscribe(artist => {
         this.searchRes = artist.items;

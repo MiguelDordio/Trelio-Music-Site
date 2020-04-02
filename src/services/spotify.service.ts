@@ -64,6 +64,11 @@ export class SpotifyService {
         .pipe(map(data => data['tracks']))
   }
 
+  getAlbumTracks(id:string){
+    return this.http.get('https://api.spotify.com/v1/albums/'+id+'/tracks?offset=0&limit=20&market=US', this.reqOptions)
+            .pipe( map(data => data['items']));
+  }
+
   getToken(){
     this.http.post('https://accounts.spotify.com/api/token', null, this.authOptions)
       .pipe(map(data => {this.token = data['access_token']}))

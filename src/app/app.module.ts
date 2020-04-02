@@ -10,7 +10,7 @@ import { ArtistComponent } from '../components/artist/artist.component';
 import { SearchbarComponent } from '../components/searchbar/searchbar.component';
 import { HomeComponent } from '../components/home/home.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { AlbumComponent } from './album/album.component';
+import { AlbumComponent } from '../components/album/album.component';
 import { AlbumItemComponent } from './album-item/album-item.component';
 
 @NgModule({
