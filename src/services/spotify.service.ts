@@ -59,7 +59,7 @@ export class SpotifyService {
   }
 
   getArtistAlbums(id:string){
-    return this.http.get('https://api.spotify.com/v1/artists/'+id+'/albums?market=US&limit=3', this.reqOptions)
+    return this.http.get('https://api.spotify.com/v1/artists/'+id+'/albums?market=US&limit=10', this.reqOptions)
             .pipe( map(data => data['items']));
   }
 

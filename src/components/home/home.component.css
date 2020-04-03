@@ -23,14 +23,26 @@
     padding-top: 30px;
 }
 
-.row {
+.col {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    padding: 20px 80px 0 80px;
 }
 
 .releases_item {
+    height: 125px;
+    width: 125px;
     font-family: Baloo2-Medium;
     text-align: center;
+}
+
+.nav-link {
+    font-family: Baloo2-Medium;
+    color: #011627;
+}
+
+.nav-link:hover {
+    color: #ff0022;
 }

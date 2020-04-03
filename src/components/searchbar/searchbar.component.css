@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Baloo2-Bold';
+    src: url('src/assets/fonts/Baloo2-Bold.ttf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Baloo2-Medium';
+    src: url('src/assets/fonts/Baloo2-Medium.ttf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Baloo2-Regular';
+    src: url('src/assets/fonts/Baloo2-Regular.ttf') format("opentype");
+}
+
 #searchBarWrap {
     display: flex;
     justify-content: center;
@@ -15,16 +30,24 @@
 .col {
     display: flex;
     justify-content: center;
-    overflow: auto;
+    align-items: center;
 }
 
 .search-res {
     border: #ff0022 solid;
     border-width: .1em;
     border-radius: .7em;
+    height: 70px;
     width: 325px;
-    text-align: left;
-    padding-left: 5px;
+}
+
+.nav-link {
+    font-family: Baloo2-Medium;
+    color: #011627;
+}
+
+.nav-link:hover {
+    color: #ff0022;
 }
 
 .artist-thumb {

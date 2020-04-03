@@ -6,8 +6,8 @@
     <div *ngFor="let artist of searchRes">
         <div class="row">
             <div class="col">
-                <div class="search-res well">
-                    <div *ngIf="artist.images.length > 0">
+                <div class="search-res">
+                    <div class="img_container" *ngIf="artist.images.length > 0">
                         <img class="artist-thumb img-circle" src="{{artist.images[2].url}}" width="64" height="64">
                     </div>
                     <a class="nav-link" [routerLink]="['/artist', artist.id]" routerLinkActive="active">{{ artist.name }}</a>

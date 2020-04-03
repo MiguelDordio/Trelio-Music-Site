@@ -4,10 +4,10 @@
 <h3 class="releases_title">New Releases</h3>
 
 <div *ngIf="releases">
-    <div *ngFor="let releases of releases">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="releases_item well">
+    <div class="row">
+        <div *ngFor="let releases of releases">
+            <div class="col">
+                <div class="releases_item">
                     <div *ngIf="releases.images.length > 0">
                         <img src="{{releases.images[2].url}}" alt="...">
                     </div>
