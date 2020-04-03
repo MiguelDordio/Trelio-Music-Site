@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private spotifyService: SpotifyService) { }
 
+  
+
   ngOnInit(): void {
     this.spotifyService.getToken();
     setTimeout(()=>{

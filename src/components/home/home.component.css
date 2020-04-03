@@ -13,10 +13,16 @@
     src: url('src/assets/fonts/Baloo2-Regular.ttf') format("opentype");
 }
 
+:host {
+    background-color: #011627;
+    display: block;
+}
+
 .releases_title {
     display: flex;
     justify-content: center;
     padding-top: 40px;
+    color: #ff0022;
 }
 
 .releases-albums {
@@ -34,7 +40,6 @@
 .releases_item {
     height: 125px;
     width: 125px;
-    font-family: Baloo2-Medium;
     text-align: center;
 }
 
