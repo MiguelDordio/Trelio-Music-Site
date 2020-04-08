@@ -13,39 +13,52 @@
     src: url('src/assets/fonts/Baloo2-Regular.ttf') format("opentype");
 }
 
-:host {
-    background-color: #333333;
+.b{
+    background-color: #232023;
 }
 
 .releases_title {
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    color: #ff0022;
+    color: #fcfaf9;
 }
 
 .col {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 50px 50px 10px 50px;
+    padding: 30px 30px 10px 30px;
 }
 
 .releases_item {
+    padding-top: 20px;
     border: #5e5e5e;
     border-width: .2em;
     border-radius: .7em;
-    background-color: #5e5e5e;
-    height: 200px;
-    width: 175px;
+    background-color: #333333;
+    height: 286px;
+    width: 212px;
     text-align: center;
+    overflow: hidden;
 }
 
-.nav-link {
+
+.releases-artist-album {
+    padding-top: 15px;
     font-family: Baloo2-Medium;
     color: #fcfaf9;
 }
 
-.nav-link:hover {
+.releases-artist-album:hover {
+    color: #48e5c2;
+}
+
+
+.releases-artist-name {
+    font-family: Baloo2-Medium;
+    color: #b3b3b3;
+}
+
+.releases-artist-name:hover {
     color: #48e5c2;
 }
