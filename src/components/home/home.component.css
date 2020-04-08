@@ -14,15 +14,13 @@
 }
 
 :host {
-    background-color: #011627;
-    display: block;
+    background-color: #333333;
 }
-
 
 .releases_title {
     display: flex;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 50px;
     color: #ff0022;
 }
 
@@ -30,13 +28,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    padding: 50px 50px 0 50px;
+    padding: 50px 50px 10px 50px;
 }
 
 .releases_item {
-    border: #ff0022 solid;
+    border: #5e5e5e;
     border-width: .2em;
     border-radius: .7em;
+    background-color: #5e5e5e;
     height: 200px;
     width: 175px;
     text-align: center;
@@ -44,10 +43,9 @@
 
 .nav-link {
     font-family: Baloo2-Medium;
-    color: #011627;
+    color: #fcfaf9;
 }
 
 .nav-link:hover {
-    color: #ff0022;
+    color: #48e5c2;
 }
-  

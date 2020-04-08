@@ -16,12 +16,12 @@
 #searchBarWrap {
     display: flex;
     justify-content: center;
-    padding-top: 130px;
+    padding-top: 90px;
 }
 
 #searchBar {
     font-family: Baloo2-Regular;
-    border: #ff0022 solid;
+    border: #48e5c2 solid;
     border-width: .2em;
     border-radius: .7em;
     padding: .2em .2em .2em .5em;
@@ -35,7 +35,7 @@
 }
 
 .search-res {
-    border: #ff0022 solid;
+    border: #48e5c2 solid;
     border-width: .1em;
     border-radius: .7em;
     height: 70px;

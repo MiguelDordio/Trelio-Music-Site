@@ -14,12 +14,8 @@
 }
 
 :host {
-    background-color: #011627;
+    background-color: #333333;
     display: block;
-}
-
-.bo {
-    padding-top: 60px;
 }
 
 .artist-name {
@@ -28,8 +24,23 @@
     color: #fcfffc;
 }
 
-.track {
+.popular-tracks {
+    padding-left: 10px;
+    font-family: Baloo2-Bold;
     color: #fcfffc;
+}
+
+.tracklist-container {
+    padding-top: 10px;
+}
+
+.track {
+    padding: 3px 0 3px 0;
+    color: #fcfffc;
+}
+
+.track:hover {
+    background-color: #777b7e;
 }
 
 .track-name {

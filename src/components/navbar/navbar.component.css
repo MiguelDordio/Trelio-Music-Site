@@ -9,8 +9,6 @@
 }
 
 .navbarContainer {
-    position: fixed;
-    top: 0;
     width: 100%;
     height: 50px;
     padding: 0 40px 0 40px;
@@ -20,7 +18,7 @@
     text-align: center;
     align-items: center;
     font-family: Baloo2-Medium;
-    background-color: #ff0022;
+    background-color: #48e5c2;
 }
 
 a {

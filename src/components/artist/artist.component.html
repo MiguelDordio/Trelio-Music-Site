@@ -2,10 +2,14 @@
 <div class="bo" *ngIf="artist">
     <header class="artist-header">
         <div class="artist-thumb-container" *ngIf="artist.images.length > 0">
-            <img class="artist-thumb" src="{{artist.images[2].url}}">
+            <img class="artist-thumb" src="{{artist.images[2].url}}" alt="...">
         </div>
         <h1 class="artist-name">{{ artist.name }}</h1>
     </header>
+
+    <div>
+        <h4><span class="popular-tracks">Populares</span></h4>
+    </div>
 
     <div class="col-xs-12 col-lg-9 col-xl-8">
         <section class="tracklist-container">
@@ -16,6 +20,7 @@
                         <path fill-rule="evenodd" d="M9 3v10H8V3h1z" clip-rule="evenodd"/>
                         <path d="M8 2.82a1 1 0 01.804-.98l3-.6A1 1 0 0113 2.22V4L8 5V2.82z"/>
                     </svg>
+                    <img class="album-img" src="{{topTracks.album.images[2].url}}" alt="...">
                     <span class="track-name">{{ topTracks.name }}</span>
                 </div>
             </div>
