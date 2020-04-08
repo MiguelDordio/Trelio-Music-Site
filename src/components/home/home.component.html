@@ -4,16 +4,18 @@
 
     <h3 class="releases_title">New Releases</h3>
 
-    <div *ngIf="releases">
-        <div class="row">
+    <div class="container h-100" *ngIf="releases">
+        <div class="row h-100 justify-content-center align-items-center">
             <div *ngFor="let releases of releases">
                 <div class="col">
                     <div class="releases_item">
                         <div *ngIf="releases.images.length > 0">
                             <img src="{{releases.images[2].url}}" alt="...">
                         </div>
-                        <a class="nav-link" [routerLink]="['/album', releases.id]" routerLinkActive="active">{{releases.name}}</a>
-                        <a class="nav-link" [routerLink]="['/artist', releases.artists[0].id]" routerLinkActive="active">{{ releases.artists[0].name }}</a>
+                        <a class="nav-link" [routerLink]="['/album', releases.id]"
+                            routerLinkActive="active">{{releases.name}}</a>
+                        <a class="nav-link" [routerLink]="['/artist', releases.artists[0].id]"
+                            routerLinkActive="active">{{ releases.artists[0].name }}</a>
                     </div>
                 </div>
             </div>

@@ -16,10 +16,11 @@
 #searchBarWrap {
     display: flex;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 130px;
 }
 
 #searchBar {
+    font-family: Baloo2-Regular;
     border: #ff0022 solid;
     border-width: .2em;
     border-radius: .7em;
