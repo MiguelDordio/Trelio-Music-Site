@@ -35,11 +35,20 @@
 }
 
 .search-res {
+    text-align: center;
     border: #48e5c2 solid;
     border-width: .1em;
     border-radius: .7em;
     height: 70px;
     width: 325px;
+}
+
+.img-container{
+    padding: 4px 0 0 5px;
+}
+
+.search-artist-name {
+    padding-left: 10px;
 }
 
 .nav-link {

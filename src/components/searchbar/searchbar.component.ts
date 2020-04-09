@@ -14,16 +14,21 @@ export class SearchbarComponent implements OnInit {
   searchStr: String;
   searchRes: Artist[];
 
+
+  sortBy(prop: string) {
+    return this.searchRes.sort((a, b) => a[prop] > b[prop] ? 1 : a[prop] === b[prop] ? 0 : -1);
+  }
+
   constructor(
     private spotifyService: SpotifyService) { }
 
-  searchMusic(){
+  searchMusic() {
     this.spotifyService.getArtist(this.searchStr)
       .subscribe(artist => {
         this.searchRes = artist.items;
-        }
+        this.sortBy('popularity');
+      }
       );
-
   }
 
   ngOnInit(): void {
