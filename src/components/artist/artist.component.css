@@ -14,7 +14,7 @@
 }
 
 :host {
-    background-color: #333333;
+    background-color: #232023;
     display: block;
 }
 
@@ -36,7 +36,7 @@
 
 .track {
     padding: 3px 0 3px 0;
-    color: #fcfffc;
+    color: #fcfaf9;
 }
 
 .track:hover {
@@ -61,7 +61,7 @@
     text-align: center;
     font-size: larger;
     font-family: Baloo2-Bold;
-    color: #ff0022;
+    color: #fcfaf9;
 }
 
 .album-item {
@@ -73,9 +73,9 @@
 
 .nav-link {
     font-family: Baloo2-Medium;
-    color: #ff0022;
+    color: #fcfaf9;
 }
 
 .nav-link:hover {
-    color: #fcfffc;
+    color: #48e5c2;
 }
