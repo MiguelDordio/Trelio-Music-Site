@@ -8,17 +8,36 @@
     src: url('src/assets/fonts/Baloo2-Medium.ttf') format("opentype");
 }
 
+@font-face {
+    font-family: 'Baloo2-Regular';
+    src: url('src/assets/fonts/Baloo2-Regular.ttf') format("opentype");
+}
+
+:host {
+    background-color: #232023;
+    display: block;
+}
+
 .container-fluid {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 90px 0 0 70px;
+    display: flex;
+}
+
+.album-info {
+    width: 55%;
+    float: left;
+    text-align: center;
+}
+
+.album-tracks {}
+
+.tracklistHeader {
+    text-align: center;
 }
 
 .tracklistHeader_body {
-    text-align: initial;
-    width: 70%;
     font-family: Baloo2-Medium;
+    color: #fcfffc;
 }
 
 .tracklistHeader_text-silence {
@@ -26,12 +45,14 @@
 }
 
 .track {
-    font-family: Baloo2-Medium;
     display: block;
 }
 
 .track_name {
     padding-left: 10px;
+    font-family: Baloo2-Regular;
+    color: #fcfffc;
+    font-size: 16px;
 }
 
 .copyrights {
@@ -40,5 +61,5 @@
     letter-spacing: .015em;
     color: #fff;
     opacity: .6;
-    padding: 0 5% 2em;
+    padding: 20px 0 0 0;
 }
