@@ -18,42 +18,44 @@
     display: block;
 }
 
-.artist-thumb-container { 
-    position: relative; 
-    width: 100%; /* for IE 6 */
- }
+.artist-thumb-container {
+    position: relative;
+    width: 100%;
+    /* for IE 6 */
+}
 
- .artist-thumb{
+.artist-thumb {
     object-fit: cover;
     width: 100%;
     height: 250px;
 }
 
-
-
-.test{
+.test {
     border: 1px solid #ccc;
     width: 400px;
     height: 400px;
     /* For Safari 5.1 to 6.0 */
-    background: -webkit-linear-gradient(to top, #232023, #fcfffc); 
+    background: -webkit-linear-gradient(to top, #232023, #fcfffc);
     /* For Opera 11.1 to 12.0 */
-    background: -o-linear-gradient(to top, #232023, #fcfffc); 
+    background: -o-linear-gradient(to top, #232023, #fcfffc);
     /* For Firefox 3.6 to 15 */
-    background: -moz-linear-gradient(to top, #232023, #fcfffc); 
+    background: -moz-linear-gradient(to top, #232023, #fcfffc);
     /* Standard syntax */
     background: linear-gradient(to top, blue, #fcfffc);
 }
 
 .artist-name {
-    position: absolute; 
-    top: 200px; 
-    left: 0; 
-    width: 100%; 
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
     padding-left: 10px;
     font-family: Baloo2-Bold;
     color: #fcfffc;
 }
+
+
+/* Popular Artist tracks */
 
 .popular-tracks {
     padding: 20px 0 0 20px;
@@ -91,6 +93,9 @@
     padding-left: 10px;
 }
 
+
+/* Artist Albums */
+
 .artist-albums {
     padding-top: 30px;
     padding-left: 20px;
@@ -104,7 +109,6 @@
     color: #fcfaf9;
     font-size: 28px;
 }
-
 
 .col {
     display: flex;
@@ -134,5 +138,53 @@
 
 .album-name:hover {
     color: #48e5c2;
-    text-decoration:none;
+    text-decoration: none;
+}
+
+
+/* Artist Singles */
+
+.artist-single {
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.single-title {
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: larger;
+    font-family: Baloo2-Bold;
+    color: #fcfaf9;
+    font-size: 28px;
+}
+
+.col {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 10px 30px;
+}
+
+.single-item {
+    padding-top: 20px;
+    border: #5e5e5e;
+    border-width: .2em;
+    border-radius: .7em;
+    background-color: #333333;
+    height: 286px;
+    width: 212px;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.single-name {
+    padding-top: 30px;
+    font-family: Baloo2-Medium;
+    color: #fcfaf9;
+}
+
+.single-name:hover {
+    color: #48e5c2;
+    text-decoration: none;
 }

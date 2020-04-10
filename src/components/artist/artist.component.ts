@@ -28,7 +28,6 @@ export class ArtistComponent implements OnInit {
 
   getTracksDuration(topTracks: Song[]) {
     for (var i = 0; i < topTracks.length; i++) {
-      console.log('time ' + this.msToTime(topTracks[i].duration_ms));
       topTracks[i].durantion_out = this.msToTime(topTracks[i].duration_ms);
     }
   }

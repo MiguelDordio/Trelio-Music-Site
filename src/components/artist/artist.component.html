@@ -22,8 +22,7 @@
             <section class="tracklist-container">
                 <div *ngFor="let topTracks of topTracks; let i = index">
                     <div class="track" *ngIf="5 > i">
-                        <svg class="bi bi-music-note" width="1em" height="1em" viewBox="0 0 16 16" fill="#fdfffc"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bi bi-music-note" width="1em" height="1em" viewBox="0 0 16 16" fill="#fdfffc" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
                             <path fill-rule="evenodd" d="M9 3v10H8V3h1z" clip-rule="evenodd" />
                             <path d="M8 2.82a1 1 0 01.804-.98l3-.6A1 1 0 0113 2.22V4L8 5V2.82z" />
@@ -42,13 +41,27 @@
         <div class="row">
             <div *ngFor="let album of albums">
                 <div class="col">
-                    <div class="album-item">
-                        <div *ngIf="album.album_type == 'album'">
-                            <img src="{{album.images[1].url}}" class="rounded mx-auto d-block" alt="..." width="172"
-                                height="172">
+                    <div *ngIf="album.album_type == 'album'" class="album-item">
+                        <div class="album-cover-container">
+                            <img src="{{album.images[1].url}}" class="rounded mx-auto d-block" alt="..." width="172" height="172">
                         </div>
-                        <a class="album-name" [routerLink]="['/album', album.id]"
-                            routerLinkActive="active">{{ album.name }}</a>
+                        <a class="album-name" [routerLink]="['/album', album.id]" routerLinkActive="active">{{ album.name }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="artist-single">
+        <span class="single-title">Single</span>
+        <div class="row">
+            <div *ngFor="let album of albums">
+                <div *ngIf="album.album_type == 'single'" class="col">
+                    <div class="single-item">
+                        <div class="single-cover-container">
+                            <img src="{{album.images[1].url}}" class="rounded mx-auto d-block" alt="..." width="172" height="172">
+                        </div>
+                        <a class="single-name" [routerLink]="['/album', album.id]" routerLinkActive="active">{{ album.name }}</a>
                     </div>
                 </div>
             </div>

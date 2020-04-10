@@ -35,7 +35,6 @@
 }
 
 .search-res {
-    
     border: #48e5c2 solid;
     border-width: .1em;
     border-radius: .7em;
@@ -43,7 +42,7 @@
     width: 325px;
 }
 
-.img-container{
+.img-container {
     padding: 4px 0 0 5px;
 }
 
@@ -54,6 +53,7 @@
 
 .search-artist-name:hover {
     color: #48e5c2;
+    text-decoration: none;
 }
 
 .artist-thumb {
