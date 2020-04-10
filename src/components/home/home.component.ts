@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
           console.log('releases: ' + releases.items[0].name);
           this.releases = releases.items;
         });
-    }, 2500);
+    }, 500);
   }
 
 }

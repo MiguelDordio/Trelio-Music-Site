@@ -16,7 +16,7 @@
                             <p>{{searchRes.artists[0].name}}</p>
                         </div>
                         <div class="tracklistHeader_description-wrapper">
-                            <p class="tracklistHeader_text-silence">{{searchRes.release_date}} • {{searchRes.total_tracks}} Músicas</p>
+                            <p class="tracklistHeader_text-silence">{{searchRes.release_date}} • {{searchRes.total_tracks}} Tracks</p>
                         </div>
                     </div>
                 </header>
@@ -32,7 +32,8 @@
                             <path fill-rule="evenodd" d="M9 3v10H8V3h1z" clip-rule="evenodd"/>
                             <path d="M8 2.82a1 1 0 01.804-.98l3-.6A1 1 0 0113 2.22V4L8 5V2.82z"/>
                         </svg>
-                        <span class="track_name">{{songs.name}}</span>
+                        <span class="track_name">{{ songs.name }}</span>
+                        <span class="track-duration">{{ songs.durantion_out }}</span>
                     </div>
                 </div>
             </section>

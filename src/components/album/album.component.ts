@@ -14,6 +14,7 @@ export class AlbumComponent implements OnInit {
 
   searchRes: any;
   songs: Song[];
+  s:Song = new Song();
 
   constructor(
     private spotifyService: SpotifyService,
@@ -31,9 +32,10 @@ export class AlbumComponent implements OnInit {
                     this.searchRes = searchRes;
                     console.log('tracks: ' + searchRes['tracks'].items);
                     this.songs = searchRes['tracks'].items;
+                    this.s.getTracksDuration(this.songs);
                 });
           })
-    }, 2500);
+    }, 500);
   }
 
 }
