@@ -19,18 +19,7 @@ export class ArtistComponent implements OnInit {
   artist: any;
   topTracks: Song[];
   albums: Album[];
-
-  msToTime(ms: number) {
-    var seconds: number = Number(Math.floor((ms % 60000) / 1000).toFixed(0));
-    var minutes: number = Math.floor((ms / 60000));
-    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-  }
-
-  getTracksDuration(topTracks: Song[]) {
-    for (var i = 0; i < topTracks.length; i++) {
-      topTracks[i].durantion_out = this.msToTime(topTracks[i].duration_ms);
-    }
-  }
+  s:Song = new Song();
 
   constructor(
     private spotifyService: SpotifyService,
@@ -53,7 +42,7 @@ export class ArtistComponent implements OnInit {
           this.spotifyService.getTopTracks(id)
             .subscribe(topTracks => {
               this.topTracks = topTracks;
-              this.getTracksDuration(this.topTracks);
+              this.s.getTracksDuration(this.topTracks);
             });
           // Get Artist Albums    
           this.spotifyService.getArtistAlbums(id)
@@ -63,5 +52,4 @@ export class ArtistComponent implements OnInit {
         });
     }, 500);
   }
-
 }
