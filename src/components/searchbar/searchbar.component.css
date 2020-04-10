@@ -35,7 +35,7 @@
 }
 
 .search-res {
-    text-align: center;
+    
     border: #48e5c2 solid;
     border-width: .1em;
     border-radius: .7em;
@@ -48,15 +48,11 @@
 }
 
 .search-artist-name {
-    padding-left: 10px;
-}
-
-.nav-link {
     font-family: Baloo2-Medium;
     color: #fcfaf9;
 }
 
-.nav-link:hover {
+.search-artist-name:hover {
     color: #48e5c2;
 }
 

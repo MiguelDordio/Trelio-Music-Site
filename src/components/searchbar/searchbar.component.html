@@ -11,7 +11,7 @@
                     <div class="img-container" *ngIf="artist.images.length > 0">
                         <img class="artist-thumb rounded-circle" src="{{artist.images[2].url}}" width="60" height="60">
                     </div>
-                    <a class="search-artist-name nav-link" [routerLink]="['/artist', artist.id]"
+                    <a class="search-artist-name" [routerLink]="['/artist', artist.id]"
                         routerLinkActive="active">{{ artist.name }}</a>
                 </div>
             </div>

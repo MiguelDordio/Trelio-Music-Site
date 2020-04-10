@@ -15,10 +15,23 @@ import { Song } from '../../Song';
 })
 export class ArtistComponent implements OnInit {
 
-  id:string;
+  id: string;
   artist: any;
   topTracks: Song[];
   albums: Album[];
+
+  msToTime(ms: number) {
+    var seconds: number = Number(Math.floor((ms % 60000) / 1000).toFixed(0));
+    var minutes: number = Math.floor((ms / 60000));
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+  }
+
+  getTracksDuration(topTracks: Song[]) {
+    for (var i = 0; i < topTracks.length; i++) {
+      console.log('time ' + this.msToTime(topTracks[i].duration_ms));
+      topTracks[i].durantion_out = this.msToTime(topTracks[i].duration_ms);
+    }
+  }
 
   constructor(
     private spotifyService: SpotifyService,
@@ -28,7 +41,7 @@ export class ArtistComponent implements OnInit {
 
   ngOnInit(): void {
     this.spotifyService.getToken();
-    setTimeout(()=>{
+    setTimeout(() => {
       this.route.params
         .pipe(map(params => params['id']))
         .subscribe((id) => {
@@ -40,8 +53,8 @@ export class ArtistComponent implements OnInit {
           // Get Artist top tracks
           this.spotifyService.getTopTracks(id)
             .subscribe(topTracks => {
-              console.log('topT: ' + topTracks);
               this.topTracks = topTracks;
+              this.getTracksDuration(this.topTracks);
             });
           // Get Artist Albums    
           this.spotifyService.getArtistAlbums(id)
